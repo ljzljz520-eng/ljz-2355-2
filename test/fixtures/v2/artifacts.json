@@ -1,0 +1,7 @@
+{
+  "artifacts": [
+    { "name": "ui.js", "type": "bundle", "path": "dist/ui.js", "required": true },
+    { "name": "ui.d.ts", "type": "types", "path": "dist/ui.d.ts", "required": true },
+    { "name": "contract-report.json", "type": "report", "path": "evidence/2.0.0.json", "required": false }
+  ]
+}

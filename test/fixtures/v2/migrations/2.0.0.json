@@ -1,0 +1,57 @@
+{
+  "prop-renamed:cw-button:loading->busy": {
+    "title": "loading \u2192 busy",
+    "guide": "Replace `loading` (boolean) with `busy: { pending: boolean; progress?: number }`. Set `busy.pending` where you previously passed `loading`.",
+    "reverify": [
+      {
+        "name": "busy example renders pending state",
+        "example": "cw-button/busy",
+        "expect": "Saving"
+      }
+    ]
+  },
+  "event-renamed:cw-button:loadingChange->busyChange": {
+    "title": "loadingChange \u2192 busyChange",
+    "guide": "Listen for `busyChange` and read `event.busy` (boolean) instead of `event.loading`.",
+    "reverify": [
+      {
+        "name": "button still clickable after rename",
+        "example": "cw-button/basic",
+        "expect": "Save changes"
+      }
+    ]
+  },
+  "prop-renamed:cw-tree:expanded->initiallyExpanded": {
+    "title": "expanded \u2192 initiallyExpanded",
+    "guide": "Pass initial expansion via `initiallyExpanded: string[]`.",
+    "reverify": [
+      {
+        "name": "tree reflects initiallyExpanded",
+        "example": "cw-tree/recursive",
+        "expect": "aria-expanded=\"true\""
+      }
+    ]
+  },
+  "slot-removed:cw-tree:guide": {
+    "title": "guide slot removed",
+    "guide": "The experimental `guide` slot was removed; indent guides are controlled via CSS variables.",
+    "reverify": [
+      {
+        "name": "tree still renders nodes",
+        "example": "cw-tree/recursive",
+        "expect": "role=\"treeitem\""
+      }
+    ]
+  },
+  "prop-removed:cw-tree:guides": {
+    "title": "guides prop removed",
+    "guide": "The boolean `guides` prop is removed. Indent guides are now always rendered through CSS; remove the attribute.",
+    "reverify": [
+      {
+        "name": "tree renders without guides prop",
+        "example": "cw-tree/recursive",
+        "expect": "role=\"tree\""
+      }
+    ]
+  }
+}

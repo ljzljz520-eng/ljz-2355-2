@@ -1,0 +1,6 @@
+{
+  "renames": {
+    "cw-button:loading": "busy",
+    "cw-tree:expanded": "initiallyExpanded"
+  }
+}

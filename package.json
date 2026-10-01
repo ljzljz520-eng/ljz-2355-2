@@ -1,0 +1,19 @@
+{
+  "name": "compodoc-platform",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ],
+  "scripts": {
+    "build:core": "bash scripts/build-core.sh",
+    "build": "npm run build:core && npm run docs:data",
+    "docs:data": "node packages/core/dist/cli/docs-data.js",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "ingest": "node packages/core/dist/cli/ingest.js",
+    "preview": "node packages/preview-server/server.mjs",
+    "test": "node --test --test-concurrency=1 test/*.test.mjs"
+  }
+}

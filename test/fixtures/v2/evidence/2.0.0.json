@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "components": {
+    "cw-button": {
+      "slots": [
+        { "name": "default", "description": "Button label content.", "required": false },
+        { "name": "icon", "description": "Leading icon, receives { busy }.", "required": false }
+      ]
+    },
+    "cw-tree": {
+      "slots": [
+        { "name": "node", "description": "Custom node rendering, receives { node }.", "required": false }
+      ]
+    }
+  }
+}
