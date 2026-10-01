@@ -1,0 +1,14 @@
+{
+  "version": "3.0.0",
+  "cases": [
+    {
+      "id": "button.label-removed",
+      "kind": "removal",
+      "component": "Button",
+      "from": { "prop": "label" },
+      "to": { "slot": "default" },
+      "example": "loading",
+      "must": ["contract.props.label is absent", "contract.props.label not present even as deprecated", "example loading passed", "deprecation range is [2.0.0,3.0.0)"]
+    }
+  ]
+}

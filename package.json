@@ -1,0 +1,21 @@
+{
+  "name": "component-docs-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Open-source component documentation platform: pinned-commit contract extraction, SQL release graph, sandboxed previews.",
+  "scripts": {
+    "server": "python3 server/server.py --db docs.db --storage store --site dist",
+    "build:vitepress": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "site": "node tools/sitegen.mjs http://127.0.0.1:4173/api/site-data dist http://127.0.0.1:4174",
+    "test": "node tests/acceptance.mjs",
+    "e2e": "bash scripts/e2e.sh",
+    "e2e:partial": "bash scripts/e2e-partial-upload.sh"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.0"
+  },
+  "engines": { "node": ">=20" }
+}

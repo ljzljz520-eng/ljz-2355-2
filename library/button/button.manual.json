@@ -1,0 +1,8 @@
+{
+  "props": {
+    "icon": { "since": "1.0.0", "reason": "value is a free-form VNode/string registered by the icon pack; no static source of truth", "description": "Leading icon name or VNode. Allowed names: 'check' | 'arrow' (see icon pack).", "values": ["check", "arrow"] }
+  },
+  "slots": {
+    "icon": { "since": "1.0.0", "reason": "slot content shape is decided by consumers", "description": "Optional leading icon slot." }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "cases": [
+    {
+      "id": "button.type->variant",
+      "kind": "rename",
+      "component": "Button",
+      "from": { "prop": "type", "sample": "<ui-button type=\"primary\" label=\"x\"/>" },
+      "to": { "prop": "variant", "sample": "<ui-button variant=\"primary\">x</ui-button>" },
+      "example": "rename-variant",
+      "must": ["contract.props.variant exists", "contract.props.type is absent", "example rename-variant passed"]
+    },
+    {
+      "id": "button.label-slot",
+      "kind": "deprecation",
+      "component": "Button",
+      "example": "basic",
+      "must": ["contract.props.label.deprecated.since == 2.0.0", "slots.default exists", "example basic passed"]
+    }
+  ]
+}
